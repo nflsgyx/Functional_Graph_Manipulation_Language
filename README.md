@@ -1,7 +1,6 @@
-# GMAIL: Graph Manipulation And Implementation Language 
-## with First-Class Function
+## GMAIL: Graph Manipulation And Implementation Language with First-Class Function
 
-## Participants
+### Participants
 
 - Ni Chang (Tester)
 - Siwei Chen (Manager)
