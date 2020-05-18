@@ -1,6 +1,6 @@
-# GMAIL: Graph Manipulation And Implementation Language
+## GMAIL: Graph Manipulation And Implementation Language with First-Class Function
 
-## Participants
+### Participants
 
 - Ni Chang (Tester)
 - Siwei Chen (Manager)
@@ -10,7 +10,16 @@
 
 Useful command lines:
 
-docker run --rm -it -v /Users/haotangliu/Documents/20spring/4115PLT/microc:/home/microc -w=/home/microc columbiasedwards/plt
+docker run --rm -it -v `pwd`:/home/microc -w=/home/microc columbiasedwards/plt
 
-eval `opam config env`
-ocamlyacc -v gmailparse.mly
+ocamlbuild -use-ocamlfind -pkgs llvm,llvm.analysis -cflags -w,+a-4 gmail.native
+
+
+./gmail.native ./new-tests/test1.mc > test.ll
+
+llc -relocation-model=pic test.ll > test.s
+
+cc -o test.exe test.s stdlib.o -lm
+
+./test.exe
+
