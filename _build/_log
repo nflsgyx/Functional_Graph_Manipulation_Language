@@ -1,0 +1,12 @@
+### Starting build.
+Backtrace:
+                      - Failed to build the target gmail.native
+                          - Building gmail.native:
+                              - Building gmail.cmx:
+                                  - Failed to build all of these:
+                                      - Building gmail.ml:
+                                          - Failed to build all of these:
+                                              - Building gmail.mly
+                                              - Building gmail.mll
+                                      - Building gmail.mlpack
+# Compilation unsuccessful.

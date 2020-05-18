@@ -1,0 +1,646 @@
+/usr/bin/lli
+
+###### Testing test-add1
+./gmail.native tests/test-add1.mc > test-add1.ll
+llc -relocation-model=pic test-add1.ll > test-add1.s
+cc -o test-add1.exe test-add1.s stdlib.o
+./test-add1.exe
+diff -b test-add1.out tests/test-add1.out > test-add1.diff
+-e ###### SUCCESS
+
+###### Testing test-arith1
+./gmail.native tests/test-arith1.mc > test-arith1.ll
+llc -relocation-model=pic test-arith1.ll > test-arith1.s
+cc -o test-arith1.exe test-arith1.s stdlib.o
+./test-arith1.exe
+diff -b test-arith1.out tests/test-arith1.out > test-arith1.diff
+-e ###### SUCCESS
+
+###### Testing test-arith2
+./gmail.native tests/test-arith2.mc > test-arith2.ll
+llc -relocation-model=pic test-arith2.ll > test-arith2.s
+cc -o test-arith2.exe test-arith2.s stdlib.o
+./test-arith2.exe
+diff -b test-arith2.out tests/test-arith2.out > test-arith2.diff
+-e ###### SUCCESS
+
+###### Testing test-arith3
+./gmail.native tests/test-arith3.mc > test-arith3.ll
+llc -relocation-model=pic test-arith3.ll > test-arith3.s
+cc -o test-arith3.exe test-arith3.s stdlib.o
+./test-arith3.exe
+diff -b test-arith3.out tests/test-arith3.out > test-arith3.diff
+-e ###### SUCCESS
+
+###### Testing test-array1
+./gmail.native tests/test-array1.mc > test-array1.ll
+llc -relocation-model=pic test-array1.ll > test-array1.s
+cc -o test-array1.exe test-array1.s stdlib.o
+./test-array1.exe
+diff -b test-array1.out tests/test-array1.out > test-array1.diff
+-e ###### SUCCESS
+
+###### Testing test-array2
+./gmail.native tests/test-array2.mc > test-array2.ll
+llc -relocation-model=pic test-array2.ll > test-array2.s
+cc -o test-array2.exe test-array2.s stdlib.o
+./test-array2.exe
+diff -b test-array2.out tests/test-array2.out > test-array2.diff
+-e ###### SUCCESS
+
+###### Testing test-array3
+./gmail.native tests/test-array3.mc > test-array3.ll
+llc -relocation-model=pic test-array3.ll > test-array3.s
+cc -o test-array3.exe test-array3.s stdlib.o
+./test-array3.exe
+diff -b test-array3.out tests/test-array3.out > test-array3.diff
+-e ###### SUCCESS
+
+###### Testing test-array4
+./gmail.native tests/test-array4.mc > test-array4.ll
+llc -relocation-model=pic test-array4.ll > test-array4.s
+cc -o test-array4.exe test-array4.s stdlib.o
+./test-array4.exe
+diff -b test-array4.out tests/test-array4.out > test-array4.diff
+-e ###### SUCCESS
+
+###### Testing test-array5
+./gmail.native tests/test-array5.mc > test-array5.ll
+llc -relocation-model=pic test-array5.ll > test-array5.s
+cc -o test-array5.exe test-array5.s stdlib.o
+./test-array5.exe
+diff -b test-array5.out tests/test-array5.out > test-array5.diff
+-e ###### SUCCESS
+
+###### Testing test-array6
+./gmail.native tests/test-array6.mc > test-array6.ll
+llc -relocation-model=pic test-array6.ll > test-array6.s
+cc -o test-array6.exe test-array6.s stdlib.o
+./test-array6.exe
+diff -b test-array6.out tests/test-array6.out > test-array6.diff
+-e ###### SUCCESS
+
+###### Testing test-cross-func
+./gmail.native tests/test-cross-func.mc > test-cross-func.ll
+llc -relocation-model=pic test-cross-func.ll > test-cross-func.s
+cc -o test-cross-func.exe test-cross-func.s stdlib.o
+./test-cross-func.exe
+diff -b test-cross-func.out tests/test-cross-func.out > test-cross-func.diff
+-e ###### SUCCESS
+
+###### Testing test-demo-bfs
+./gmail.native tests/test-demo-bfs.mc > test-demo-bfs.ll
+llc -relocation-model=pic test-demo-bfs.ll > test-demo-bfs.s
+cc -o test-demo-bfs.exe test-demo-bfs.s stdlib.o
+./test-demo-bfs.exe
+diff -b test-demo-bfs.out tests/test-demo-bfs.out > test-demo-bfs.diff
+-e ###### SUCCESS
+
+###### Testing test-edge-to-s
+./gmail.native tests/test-edge-to-s.mc > test-edge-to-s.ll
+llc -relocation-model=pic test-edge-to-s.ll > test-edge-to-s.s
+cc -o test-edge-to-s.exe test-edge-to-s.s stdlib.o
+./test-edge-to-s.exe
+diff -b test-edge-to-s.out tests/test-edge-to-s.out > test-edge-to-s.diff
+-e ###### SUCCESS
+
+###### Testing test-edge1
+./gmail.native tests/test-edge1.mc > test-edge1.ll
+llc -relocation-model=pic test-edge1.ll > test-edge1.s
+cc -o test-edge1.exe test-edge1.s stdlib.o
+./test-edge1.exe
+diff -b test-edge1.out tests/test-edge1.out > test-edge1.diff
+-e ###### SUCCESS
+
+###### Testing test-edge2
+./gmail.native tests/test-edge2.mc > test-edge2.ll
+llc -relocation-model=pic test-edge2.ll > test-edge2.s
+cc -o test-edge2.exe test-edge2.s stdlib.o
+./test-edge2.exe
+diff -b test-edge2.out tests/test-edge2.out > test-edge2.diff
+-e ###### SUCCESS
+
+###### Testing test-fib
+./gmail.native tests/test-fib.mc > test-fib.ll
+llc -relocation-model=pic test-fib.ll > test-fib.s
+cc -o test-fib.exe test-fib.s stdlib.o
+./test-fib.exe
+diff -b test-fib.out tests/test-fib.out > test-fib.diff
+-e ###### SUCCESS
+
+###### Testing test-float1
+./gmail.native tests/test-float1.mc > test-float1.ll
+llc -relocation-model=pic test-float1.ll > test-float1.s
+cc -o test-float1.exe test-float1.s stdlib.o
+./test-float1.exe
+diff -b test-float1.out tests/test-float1.out > test-float1.diff
+-e ###### SUCCESS
+
+###### Testing test-float2
+./gmail.native tests/test-float2.mc > test-float2.ll
+llc -relocation-model=pic test-float2.ll > test-float2.s
+cc -o test-float2.exe test-float2.s stdlib.o
+./test-float2.exe
+diff -b test-float2.out tests/test-float2.out > test-float2.diff
+-e ###### SUCCESS
+
+###### Testing test-float3
+./gmail.native tests/test-float3.mc > test-float3.ll
+llc -relocation-model=pic test-float3.ll > test-float3.s
+cc -o test-float3.exe test-float3.s stdlib.o
+./test-float3.exe
+diff -b test-float3.out tests/test-float3.out > test-float3.diff
+-e ###### SUCCESS
+
+###### Testing test-for1
+./gmail.native tests/test-for1.mc > test-for1.ll
+llc -relocation-model=pic test-for1.ll > test-for1.s
+cc -o test-for1.exe test-for1.s stdlib.o
+./test-for1.exe
+diff -b test-for1.out tests/test-for1.out > test-for1.diff
+-e ###### SUCCESS
+
+###### Testing test-for2
+./gmail.native tests/test-for2.mc > test-for2.ll
+llc -relocation-model=pic test-for2.ll > test-for2.s
+cc -o test-for2.exe test-for2.s stdlib.o
+./test-for2.exe
+diff -b test-for2.out tests/test-for2.out > test-for2.diff
+-e ###### SUCCESS
+
+###### Testing test-func1
+./gmail.native tests/test-func1.mc > test-func1.ll
+llc -relocation-model=pic test-func1.ll > test-func1.s
+cc -o test-func1.exe test-func1.s stdlib.o
+./test-func1.exe
+diff -b test-func1.out tests/test-func1.out > test-func1.diff
+-e ###### SUCCESS
+
+###### Testing test-func2
+./gmail.native tests/test-func2.mc > test-func2.ll
+llc -relocation-model=pic test-func2.ll > test-func2.s
+cc -o test-func2.exe test-func2.s stdlib.o
+./test-func2.exe
+diff -b test-func2.out tests/test-func2.out > test-func2.diff
+-e ###### SUCCESS
+
+###### Testing test-func3
+./gmail.native tests/test-func3.mc > test-func3.ll
+llc -relocation-model=pic test-func3.ll > test-func3.s
+cc -o test-func3.exe test-func3.s stdlib.o
+./test-func3.exe
+diff -b test-func3.out tests/test-func3.out > test-func3.diff
+-e ###### SUCCESS
+
+###### Testing test-func4
+./gmail.native tests/test-func4.mc > test-func4.ll
+llc -relocation-model=pic test-func4.ll > test-func4.s
+cc -o test-func4.exe test-func4.s stdlib.o
+./test-func4.exe
+diff -b test-func4.out tests/test-func4.out > test-func4.diff
+-e ###### SUCCESS
+
+###### Testing test-func5
+./gmail.native tests/test-func5.mc > test-func5.ll
+llc -relocation-model=pic test-func5.ll > test-func5.s
+cc -o test-func5.exe test-func5.s stdlib.o
+./test-func5.exe
+diff -b test-func5.out tests/test-func5.out > test-func5.diff
+-e ###### SUCCESS
+
+###### Testing test-func6
+./gmail.native tests/test-func6.mc > test-func6.ll
+llc -relocation-model=pic test-func6.ll > test-func6.s
+cc -o test-func6.exe test-func6.s stdlib.o
+./test-func6.exe
+diff -b test-func6.out tests/test-func6.out > test-func6.diff
+-e ###### SUCCESS
+
+###### Testing test-func7
+./gmail.native tests/test-func7.mc > test-func7.ll
+llc -relocation-model=pic test-func7.ll > test-func7.s
+cc -o test-func7.exe test-func7.s stdlib.o
+./test-func7.exe
+diff -b test-func7.out tests/test-func7.out > test-func7.diff
+-e ###### SUCCESS
+
+###### Testing test-func8
+./gmail.native tests/test-func8.mc > test-func8.ll
+llc -relocation-model=pic test-func8.ll > test-func8.s
+cc -o test-func8.exe test-func8.s stdlib.o
+./test-func8.exe
+diff -b test-func8.out tests/test-func8.out > test-func8.diff
+-e ###### SUCCESS
+
+###### Testing test-func9
+./gmail.native tests/test-func9.mc > test-func9.ll
+llc -relocation-model=pic test-func9.ll > test-func9.s
+cc -o test-func9.exe test-func9.s stdlib.o
+./test-func9.exe
+diff -b test-func9.out tests/test-func9.out > test-func9.diff
+-e ###### SUCCESS
+
+###### Testing test-gcd
+./gmail.native tests/test-gcd.mc > test-gcd.ll
+llc -relocation-model=pic test-gcd.ll > test-gcd.s
+cc -o test-gcd.exe test-gcd.s stdlib.o
+./test-gcd.exe
+diff -b test-gcd.out tests/test-gcd.out > test-gcd.diff
+-e ###### SUCCESS
+
+###### Testing test-gcd2
+./gmail.native tests/test-gcd2.mc > test-gcd2.ll
+llc -relocation-model=pic test-gcd2.ll > test-gcd2.s
+cc -o test-gcd2.exe test-gcd2.s stdlib.o
+./test-gcd2.exe
+diff -b test-gcd2.out tests/test-gcd2.out > test-gcd2.diff
+-e ###### SUCCESS
+
+###### Testing test-global1
+./gmail.native tests/test-global1.mc > test-global1.ll
+llc -relocation-model=pic test-global1.ll > test-global1.s
+cc -o test-global1.exe test-global1.s stdlib.o
+./test-global1.exe
+diff -b test-global1.out tests/test-global1.out > test-global1.diff
+-e ###### SUCCESS
+
+###### Testing test-global2
+./gmail.native tests/test-global2.mc > test-global2.ll
+llc -relocation-model=pic test-global2.ll > test-global2.s
+cc -o test-global2.exe test-global2.s stdlib.o
+./test-global2.exe
+diff -b test-global2.out tests/test-global2.out > test-global2.diff
+-e ###### SUCCESS
+
+###### Testing test-global3
+./gmail.native tests/test-global3.mc > test-global3.ll
+llc -relocation-model=pic test-global3.ll > test-global3.s
+cc -o test-global3.exe test-global3.s stdlib.o
+./test-global3.exe
+diff -b test-global3.out tests/test-global3.out > test-global3.diff
+-e ###### SUCCESS
+
+###### Testing test-graph-add-edge-by-id
+./gmail.native tests/test-graph-add-edge-by-id.mc > test-graph-add-edge-by-id.ll
+llc -relocation-model=pic test-graph-add-edge-by-id.ll > test-graph-add-edge-by-id.s
+cc -o test-graph-add-edge-by-id.exe test-graph-add-edge-by-id.s stdlib.o
+./test-graph-add-edge-by-id.exe
+diff -b test-graph-add-edge-by-id.out tests/test-graph-add-edge-by-id.out > test-graph-add-edge-by-id.diff
+-e ###### SUCCESS
+
+###### Testing test-graph-add-edge
+./gmail.native tests/test-graph-add-edge.mc > test-graph-add-edge.ll
+llc -relocation-model=pic test-graph-add-edge.ll > test-graph-add-edge.s
+cc -o test-graph-add-edge.exe test-graph-add-edge.s stdlib.o
+./test-graph-add-edge.exe
+diff -b test-graph-add-edge.out tests/test-graph-add-edge.out > test-graph-add-edge.diff
+-e ###### SUCCESS
+
+###### Testing test-graph-add-edge2
+./gmail.native tests/test-graph-add-edge2.mc > test-graph-add-edge2.ll
+llc -relocation-model=pic test-graph-add-edge2.ll > test-graph-add-edge2.s
+cc -o test-graph-add-edge2.exe test-graph-add-edge2.s stdlib.o
+./test-graph-add-edge2.exe
+diff -b test-graph-add-edge2.out tests/test-graph-add-edge2.out > test-graph-add-edge2.diff
+-e ###### SUCCESS
+
+###### Testing test-graph-copy
+./gmail.native tests/test-graph-copy.mc > test-graph-copy.ll
+llc -relocation-model=pic test-graph-copy.ll > test-graph-copy.s
+cc -o test-graph-copy.exe test-graph-copy.s stdlib.o
+./test-graph-copy.exe
+diff -b test-graph-copy.out tests/test-graph-copy.out > test-graph-copy.diff
+-e ###### SUCCESS
+
+###### Testing test-graph-remove-edge
+./gmail.native tests/test-graph-remove-edge.mc > test-graph-remove-edge.ll
+llc -relocation-model=pic test-graph-remove-edge.ll > test-graph-remove-edge.s
+cc -o test-graph-remove-edge.exe test-graph-remove-edge.s stdlib.o
+./test-graph-remove-edge.exe
+diff -b test-graph-remove-edge.out tests/test-graph-remove-edge.out > test-graph-remove-edge.diff
+-e ###### SUCCESS
+
+###### Testing test-graph-remove-node
+./gmail.native tests/test-graph-remove-node.mc > test-graph-remove-node.ll
+llc -relocation-model=pic test-graph-remove-node.ll > test-graph-remove-node.s
+cc -o test-graph-remove-node.exe test-graph-remove-node.s stdlib.o
+./test-graph-remove-node.exe
+diff -b test-graph-remove-node.out tests/test-graph-remove-node.out > test-graph-remove-node.diff
+-e ###### SUCCESS
+
+###### Testing test-graph-set-flags
+./gmail.native tests/test-graph-set-flags.mc > test-graph-set-flags.ll
+llc -relocation-model=pic test-graph-set-flags.ll > test-graph-set-flags.s
+cc -o test-graph-set-flags.exe test-graph-set-flags.s stdlib.o
+./test-graph-set-flags.exe
+diff -b test-graph-set-flags.out tests/test-graph-set-flags.out > test-graph-set-flags.diff
+-e ###### SUCCESS
+
+###### Testing test-graph-to-s
+./gmail.native tests/test-graph-to-s.mc > test-graph-to-s.ll
+llc -relocation-model=pic test-graph-to-s.ll > test-graph-to-s.s
+cc -o test-graph-to-s.exe test-graph-to-s.s stdlib.o
+./test-graph-to-s.exe
+diff -b test-graph-to-s.out tests/test-graph-to-s.out > test-graph-to-s.diff
+-e ###### SUCCESS
+
+###### Testing test-graph1
+./gmail.native tests/test-graph1.mc > test-graph1.ll
+Fatal error: exception Parsing.Parse_error
+###### FAILED
+
+###### Testing test-graph2
+./gmail.native tests/test-graph2.mc > test-graph2.ll
+llc -relocation-model=pic test-graph2.ll > test-graph2.s
+cc -o test-graph2.exe test-graph2.s stdlib.o
+./test-graph2.exe
+diff -b test-graph2.out tests/test-graph2.out > test-graph2.diff
+-e ###### SUCCESS
+
+###### Testing test-hello
+./gmail.native tests/test-hello.mc > test-hello.ll
+llc -relocation-model=pic test-hello.ll > test-hello.s
+cc -o test-hello.exe test-hello.s stdlib.o
+./test-hello.exe
+diff -b test-hello.out tests/test-hello.out > test-hello.diff
+-e ###### SUCCESS
+
+###### Testing test-if1
+./gmail.native tests/test-if1.mc > test-if1.ll
+llc -relocation-model=pic test-if1.ll > test-if1.s
+cc -o test-if1.exe test-if1.s stdlib.o
+./test-if1.exe
+diff -b test-if1.out tests/test-if1.out > test-if1.diff
+-e ###### SUCCESS
+
+###### Testing test-if2
+./gmail.native tests/test-if2.mc > test-if2.ll
+llc -relocation-model=pic test-if2.ll > test-if2.s
+cc -o test-if2.exe test-if2.s stdlib.o
+./test-if2.exe
+diff -b test-if2.out tests/test-if2.out > test-if2.diff
+-e ###### SUCCESS
+
+###### Testing test-if3
+./gmail.native tests/test-if3.mc > test-if3.ll
+llc -relocation-model=pic test-if3.ll > test-if3.s
+cc -o test-if3.exe test-if3.s stdlib.o
+./test-if3.exe
+diff -b test-if3.out tests/test-if3.out > test-if3.diff
+-e ###### SUCCESS
+
+###### Testing test-if4
+./gmail.native tests/test-if4.mc > test-if4.ll
+llc -relocation-model=pic test-if4.ll > test-if4.s
+cc -o test-if4.exe test-if4.s stdlib.o
+./test-if4.exe
+diff -b test-if4.out tests/test-if4.out > test-if4.diff
+-e ###### SUCCESS
+
+###### Testing test-if5
+./gmail.native tests/test-if5.mc > test-if5.ll
+llc -relocation-model=pic test-if5.ll > test-if5.s
+cc -o test-if5.exe test-if5.s stdlib.o
+./test-if5.exe
+diff -b test-if5.out tests/test-if5.out > test-if5.diff
+-e ###### SUCCESS
+
+###### Testing test-if6
+./gmail.native tests/test-if6.mc > test-if6.ll
+llc -relocation-model=pic test-if6.ll > test-if6.s
+cc -o test-if6.exe test-if6.s stdlib.o
+./test-if6.exe
+diff -b test-if6.out tests/test-if6.out > test-if6.diff
+-e ###### SUCCESS
+
+###### Testing test-list-copy
+./gmail.native tests/test-list-copy.mc > test-list-copy.ll
+llc -relocation-model=pic test-list-copy.ll > test-list-copy.s
+cc -o test-list-copy.exe test-list-copy.s stdlib.o
+./test-list-copy.exe
+diff -b test-list-copy.out tests/test-list-copy.out > test-list-copy.diff
+-e ###### SUCCESS
+
+###### Testing test-list-demo
+./gmail.native tests/test-list-demo.mc > test-list-demo.ll
+llc -relocation-model=pic test-list-demo.ll > test-list-demo.s
+cc -o test-list-demo.exe test-list-demo.s stdlib.o
+./test-list-demo.exe
+diff -b test-list-demo.out tests/test-list-demo.out > test-list-demo.diff
+-e ###### SUCCESS
+
+###### Testing test-list-pop-left-node
+./gmail.native tests/test-list-pop-left-node.mc > test-list-pop-left-node.ll
+llc -relocation-model=pic test-list-pop-left-node.ll > test-list-pop-left-node.s
+cc -o test-list-pop-left-node.exe test-list-pop-left-node.s stdlib.o
+./test-list-pop-left-node.exe
+diff -b test-list-pop-left-node.out tests/test-list-pop-left-node.out > test-list-pop-left-node.diff
+-e ###### SUCCESS
+
+###### Testing test-list-pop-left
+./gmail.native tests/test-list-pop-left.mc > test-list-pop-left.ll
+llc -relocation-model=pic test-list-pop-left.ll > test-list-pop-left.s
+cc -o test-list-pop-left.exe test-list-pop-left.s stdlib.o
+./test-list-pop-left.exe
+diff -b test-list-pop-left.out tests/test-list-pop-left.out > test-list-pop-left.diff
+-e ###### SUCCESS
+
+###### Testing test-list-pop-right
+./gmail.native tests/test-list-pop-right.mc > test-list-pop-right.ll
+llc -relocation-model=pic test-list-pop-right.ll > test-list-pop-right.s
+cc -o test-list-pop-right.exe test-list-pop-right.s stdlib.o
+./test-list-pop-right.exe
+diff -b test-list-pop-right.out tests/test-list-pop-right.out > test-list-pop-right.diff
+-e ###### SUCCESS
+
+###### Testing test-list-remove
+./gmail.native tests/test-list-remove.mc > test-list-remove.ll
+llc -relocation-model=pic test-list-remove.ll > test-list-remove.s
+cc -o test-list-remove.exe test-list-remove.s stdlib.o
+./test-list-remove.exe
+diff -b test-list-remove.out tests/test-list-remove.out > test-list-remove.diff
+-e ###### SUCCESS
+
+###### Testing test-list1
+./gmail.native tests/test-list1.mc > test-list1.ll
+llc -relocation-model=pic test-list1.ll > test-list1.s
+cc -o test-list1.exe test-list1.s stdlib.o
+./test-list1.exe
+diff -b test-list1.out tests/test-list1.out > test-list1.diff
+-e ###### SUCCESS
+
+###### Testing test-list2
+./gmail.native tests/test-list2.mc > test-list2.ll
+llc -relocation-model=pic test-list2.ll > test-list2.s
+cc -o test-list2.exe test-list2.s stdlib.o
+./test-list2.exe
+diff -b test-list2.out tests/test-list2.out > test-list2.diff
+-e ###### SUCCESS
+
+###### Testing test-list2_1
+./gmail.native tests/test-list2_1.mc > test-list2_1.ll
+llc -relocation-model=pic test-list2_1.ll > test-list2_1.s
+cc -o test-list2_1.exe test-list2_1.s stdlib.o
+./test-list2_1.exe
+diff -b test-list2_1.out tests/test-list2_1.out > test-list2_1.diff
+-e ###### SUCCESS
+
+###### Testing test-list2_2
+./gmail.native tests/test-list2_2.mc > test-list2_2.ll
+llc -relocation-model=pic test-list2_2.ll > test-list2_2.s
+cc -o test-list2_2.exe test-list2_2.s stdlib.o
+./test-list2_2.exe
+diff -b test-list2_2.out tests/test-list2_2.out > test-list2_2.diff
+-e ###### SUCCESS
+
+###### Testing test-list2_3
+./gmail.native tests/test-list2_3.mc > test-list2_3.ll
+llc -relocation-model=pic test-list2_3.ll > test-list2_3.s
+cc -o test-list2_3.exe test-list2_3.s stdlib.o
+./test-list2_3.exe
+diff -b test-list2_3.out tests/test-list2_3.out > test-list2_3.diff
+-e ###### SUCCESS
+
+###### Testing test-list2_4
+./gmail.native tests/test-list2_4.mc > test-list2_4.ll
+llc -relocation-model=pic test-list2_4.ll > test-list2_4.s
+cc -o test-list2_4.exe test-list2_4.s stdlib.o
+./test-list2_4.exe
+diff -b test-list2_4.out tests/test-list2_4.out > test-list2_4.diff
+-e ###### SUCCESS
+
+###### Testing test-list3
+./gmail.native tests/test-list3.mc > test-list3.ll
+llc -relocation-model=pic test-list3.ll > test-list3.s
+cc -o test-list3.exe test-list3.s stdlib.o
+./test-list3.exe
+diff -b test-list3.out tests/test-list3.out > test-list3.diff
+-e ###### SUCCESS
+
+###### Testing test-local1
+./gmail.native tests/test-local1.mc > test-local1.ll
+llc -relocation-model=pic test-local1.ll > test-local1.s
+cc -o test-local1.exe test-local1.s stdlib.o
+./test-local1.exe
+diff -b test-local1.out tests/test-local1.out > test-local1.diff
+-e ###### SUCCESS
+
+###### Testing test-local2
+./gmail.native tests/test-local2.mc > test-local2.ll
+llc -relocation-model=pic test-local2.ll > test-local2.s
+cc -o test-local2.exe test-local2.s stdlib.o
+./test-local2.exe
+diff -b test-local2.out tests/test-local2.out > test-local2.diff
+-e ###### SUCCESS
+
+###### Testing test-node-set-flag
+./gmail.native tests/test-node-set-flag.mc > test-node-set-flag.ll
+llc -relocation-model=pic test-node-set-flag.ll > test-node-set-flag.s
+cc -o test-node-set-flag.exe test-node-set-flag.s stdlib.o
+./test-node-set-flag.exe
+diff -b test-node-set-flag.out tests/test-node-set-flag.out > test-node-set-flag.diff
+-e ###### SUCCESS
+
+###### Testing test-node-to-s
+./gmail.native tests/test-node-to-s.mc > test-node-to-s.ll
+llc -relocation-model=pic test-node-to-s.ll > test-node-to-s.s
+cc -o test-node-to-s.exe test-node-to-s.s stdlib.o
+./test-node-to-s.exe
+diff -b test-node-to-s.out tests/test-node-to-s.out > test-node-to-s.diff
+-e ###### SUCCESS
+
+###### Testing test-node1
+./gmail.native tests/test-node1.mc > test-node1.ll
+llc -relocation-model=pic test-node1.ll > test-node1.s
+cc -o test-node1.exe test-node1.s stdlib.o
+./test-node1.exe
+diff -b test-node1.out tests/test-node1.out > test-node1.diff
+-e ###### SUCCESS
+
+###### Testing test-node1_1
+./gmail.native tests/test-node1_1.mc > test-node1_1.ll
+llc -relocation-model=pic test-node1_1.ll > test-node1_1.s
+cc -o test-node1_1.exe test-node1_1.s stdlib.o
+./test-node1_1.exe
+diff -b test-node1_1.out tests/test-node1_1.out > test-node1_1.diff
+-e ###### SUCCESS
+
+###### Testing test-node2
+./gmail.native tests/test-node2.mc > test-node2.ll
+llc -relocation-model=pic test-node2.ll > test-node2.s
+cc -o test-node2.exe test-node2.s stdlib.o
+./test-node2.exe
+diff -b test-node2.out tests/test-node2.out > test-node2.diff
+-e ###### SUCCESS
+
+###### Testing test-node3
+./gmail.native tests/test-node3.mc > test-node3.ll
+llc -relocation-model=pic test-node3.ll > test-node3.s
+cc -o test-node3.exe test-node3.s stdlib.o
+./test-node3.exe
+diff -b test-node3.out tests/test-node3.out > test-node3.diff
+-e ###### SUCCESS
+
+###### Testing test-ops1
+./gmail.native tests/test-ops1.mc > test-ops1.ll
+llc -relocation-model=pic test-ops1.ll > test-ops1.s
+cc -o test-ops1.exe test-ops1.s stdlib.o
+./test-ops1.exe
+diff -b test-ops1.out tests/test-ops1.out > test-ops1.diff
+-e ###### SUCCESS
+
+###### Testing test-ops2
+./gmail.native tests/test-ops2.mc > test-ops2.ll
+llc -relocation-model=pic test-ops2.ll > test-ops2.s
+cc -o test-ops2.exe test-ops2.s stdlib.o
+./test-ops2.exe
+diff -b test-ops2.out tests/test-ops2.out > test-ops2.diff
+-e ###### SUCCESS
+
+###### Testing test-string1
+./gmail.native tests/test-string1.mc > test-string1.ll
+llc -relocation-model=pic test-string1.ll > test-string1.s
+cc -o test-string1.exe test-string1.s stdlib.o
+./test-string1.exe
+diff -b test-string1.out tests/test-string1.out > test-string1.diff
+-e ###### SUCCESS
+
+###### Testing test-string2
+./gmail.native tests/test-string2.mc > test-string2.ll
+llc -relocation-model=pic test-string2.ll > test-string2.s
+cc -o test-string2.exe test-string2.s stdlib.o
+./test-string2.exe
+diff -b test-string2.out tests/test-string2.out > test-string2.diff
+-e ###### SUCCESS
+
+###### Testing test-var1
+./gmail.native tests/test-var1.mc > test-var1.ll
+llc -relocation-model=pic test-var1.ll > test-var1.s
+cc -o test-var1.exe test-var1.s stdlib.o
+./test-var1.exe
+diff -b test-var1.out tests/test-var1.out > test-var1.diff
+-e ###### SUCCESS
+
+###### Testing test-var2
+./gmail.native tests/test-var2.mc > test-var2.ll
+llc -relocation-model=pic test-var2.ll > test-var2.s
+cc -o test-var2.exe test-var2.s stdlib.o
+./test-var2.exe
+diff -b test-var2.out tests/test-var2.out > test-var2.diff
+-e ###### SUCCESS
+
+###### Testing test-while1
+./gmail.native tests/test-while1.mc > test-while1.ll
+llc -relocation-model=pic test-while1.ll > test-while1.s
+cc -o test-while1.exe test-while1.s stdlib.o
+./test-while1.exe
+diff -b test-while1.out tests/test-while1.out > test-while1.diff
+-e ###### SUCCESS
+
+###### Testing test-while2
+./gmail.native tests/test-while2.mc > test-while2.ll
+llc -relocation-model=pic test-while2.ll > test-while2.s
+cc -o test-while2.exe test-while2.s stdlib.o
+./test-while2.exe
+diff -b test-while2.out tests/test-while2.out > test-while2.diff
+-e ###### SUCCESS
