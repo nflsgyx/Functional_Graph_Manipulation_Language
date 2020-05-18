@@ -10,7 +10,7 @@
 
 Useful command lines:
 
-docker run --rm -it -v /Users/haotangliu/Documents/20spring/4115PLT/microc:/home/microc -w=/home/microc columbiasedwards/plt
+docker run --rm -it -v `pwd`:/home/microc -w=/home/microc columbiasedwards/plt
 
 eval `opam config env`
 ocamlyacc -v gmailparse.mly
