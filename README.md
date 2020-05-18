@@ -15,7 +15,10 @@ docker run --rm -it -v `pwd`:/home/microc -w=/home/microc columbiasedwards/plt
 ocamlbuild -use-ocamlfind -pkgs llvm,llvm.analysis -cflags -w,+a-4 gmail.native
 
 ./gmail.native ./new-tests/test1.mc > test.ll
+
 llc -relocation-model=pic test.ll > test.s
+
 cc -o test.exe test.s stdlib.o -lm
+
 ./test.exe
 
